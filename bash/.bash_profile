@@ -1,29 +1,44 @@
-# put computer user@hostname and cwd in terminal prompt
-#export PS1="\u@\h \w > \[\e[0m\]"
+# TERMINAL PROMPT 
+export PS1="\u@\h \w > \[\e[0m\]"
 
-# Load the dotfiles
+# DOTFILES
 for file in ~/.{bash_prompt,git-completion,aliases,secrets}; do
     [ -r "$file" ] && source "$file"
 done
 unset file
 
+# BREW
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# CHRUBY (currently unused)
+source /usr/local/share/chruby/chruby.sh
+export RUBIES=(
+  /usr/local/opt/ruby
+)
 
-. ~/.nvm/nvm.sh
+# NVM
+source $(brew --prefix nvm)/nvm.sh
 
+# RBENV USE HOMEBREW DIR INSTEAD OF ~/.rbenv
+export RBENV_ROOT=/usr/local/var/rbenv
+
+# RBENV AUTOCOMPLETE
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# EXPORTS
 export PGHOST=/tmp
-
 export EDITOR=subl
 
-alias pgs='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
-alias pgq='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
+# PATH
+homebrew=/usr/local/bin:/usr/local/sbin
+ruby=/usr/local/opt/ruby/bin
+heroku=/usr/local/heroku/bin
+rbenv=$HOME/.rbenv/bin
+export PATH=$homebrew:$rbenv:$ruby:$heroku:$PATH
 
-alias git=hub
-
-#export PATH=$HOME/Library/Python/2.7/bin:/usr/local/bin:$GOPATH/bin:$HOME/.nvm/v0.8.2/bin:$HOME/dev/bin:$PATH
-
-
+function gc() {
+  git clone git@github.com:jaketrent/$1.git
+}
+export PATH=$HOME/bin:$PATH
