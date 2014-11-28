@@ -1,0 +1,14 @@
+Host *
+  ForwardAgent yes
+
+Host *-vpc
+  ProxyCommand ssh jump1.us-east-1.canvas.insops.net -W %h:%p
+
+Host gerrit
+  Hostname gerrit.instructure.com
+  Port 29418
+
+Host heroku.personal
+  HostName heroku.com
+  IdentityFile "/Users/jtrent/.ssh/identity.heroku.personal"
+  IdentitiesOnly yes

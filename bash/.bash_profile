@@ -1,4 +1,4 @@
-# TERMINAL PROMPT 
+# TERMINAL PROMPT
 export PS1="\u@\h \w > \[\e[0m\]"
 
 # DOTFILES
@@ -21,9 +21,13 @@ fi
 # RBENV AUTOCOMPLETE
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
 # EXPORTS
 export PGHOST=/tmp
-export EDITOR=subl
+export EDITOR=vim
+export GOPATH=$HOME/go
+
 
 # PATH
 local_node=./node_modules/.bin
@@ -32,7 +36,12 @@ ruby=/usr/local/opt/ruby/bin
 heroku=/usr/local/heroku/bin
 rbenv=$HOME/.rbenv/bin
 rvm=$HOME/.rvm/bin
-export PATH=$local_node:$homebrew:$rvm:$rbenv:$ruby:$heroku:$PATH
+#java=/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin
+java=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+gopath=$GOPATH/bin
+go=/usr/local/go/bin
+pg=/Applications/Postgres.app/Contents/Versions/9.3/bin
+export PATH=$local_node:$homebrew:$rvm:$rbenv:$ruby:$heroku:$java:$gopath:$go:$pg:$PATH
 
 function gc() {
   git clone git@github.com:jaketrent/$1.git
@@ -47,4 +56,5 @@ export PATH=$HOME/bin:$PATH
 
 eval "$(hub alias -s)"
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+
