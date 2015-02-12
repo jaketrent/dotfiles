@@ -56,6 +56,7 @@ alias spoton="sudo mdutil -a -i on"
 
 # Ruby
 alias be="bundle exec"
+alias bi="bundle install"
 alias harmony="node --use-strict $(node --v8-options | grep harm | awk '{print $1}' | xargs)"
 
 # Highlighting for Keynote
@@ -66,3 +67,15 @@ alias bs="broccoli serve"
 
 # RubyMine
 alias rubym="/Applications/RubyMine.app/Contents/MacOS/rubymine"
+
+# Git
+alias g="git"
+
+# Misc bash
+alias j="jump"
+
+# Heroku
+alias fs="foreman start"
+
+#ios dev
+alias ios="open /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app"
