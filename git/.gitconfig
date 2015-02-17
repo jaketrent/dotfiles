@@ -66,6 +66,8 @@
     local_branch=$(git rev-parse --abbrev-ref HEAD); \
     git push origin $local_branch:refs/for/master'"
 
+    p = pull --rebase
+    
 [color]
     # Use colors in Git commands that are capable of colored output when outputting to the terminal
     ui = auto
@@ -97,7 +99,7 @@
 
 [core]
     editor = vim
-	  excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore
 
 [log]
     abbrevCommit = true
