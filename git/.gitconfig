@@ -67,6 +67,9 @@
     git push origin $local_branch:refs/for/master'"
 
     p = pull --rebase
+
+    # list changed files in commit (short diff)
+    d = diff-tree --no-commit-id --name-only -r HEAD
     
 [color]
     # Use colors in Git commands that are capable of colored output when outputting to the terminal
