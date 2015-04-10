@@ -13,7 +13,8 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
 fi
 
 # NVM
-[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh  # This loads NVM
+#[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh  # This loads NVM
+source $(brew --prefix nvm)/nvm.sh
 
 # RBENV USE HOMEBREW DIR INSTEAD OF ~/.rbenv
 #export RBENV_ROOT=/usr/local/var/rbenv
@@ -32,7 +33,8 @@ export GOPATH=$HOME/go
 # PATH
 local_node=./node_modules/.bin
 homebrew=/usr/local/bin:/usr/local/sbin
-ruby=/usr/local/opt/ruby/bin
+#ruby=/usr/local/opt/ruby/bin
+ruby=/Users/jtrent/.rvm/gems/ruby-2.1.5/bin
 heroku=/usr/local/heroku/bin
 rbenv=$HOME/.rbenv/bin
 rvm=$HOME/.rvm/bin
@@ -41,7 +43,9 @@ java=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
 gopath=$GOPATH/bin
 go=/usr/local/go/bin
 pg=/Applications/Postgres.app/Contents/Versions/9.3/bin
-export PATH=$local_node:$homebrew:$rvm:$rbenv:$ruby:$heroku:$java:$gopath:$go:$pg:$PATH
+nvm=~/.nvm
+devbin=~/dev/bin
+export PATH=$local_node:$homebrew:$rvm:$rbenv:$ruby:$heroku:$java:$gopath:$go:$pg:$nvm:$devbin:$PATH
 
 function gc() {
   git clone git@github.com:jaketrent/$1.git
@@ -57,4 +61,10 @@ export PATH=$HOME/bin:$PATH
 eval "$(hub alias -s)"
 
 
+# attempted pip fix
+export CFLAGS=-Qunused-arguments
+export CPPFLAGS=-Qunused-arguments
+ARCHFLAGS="-Wno-error=unused-command-line-argument-hard-error-in-future"
 
+# for flavio/jump
+source `jump-bin --bash-integration`/shell_driver
