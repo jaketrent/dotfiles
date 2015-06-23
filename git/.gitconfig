@@ -103,7 +103,8 @@
 
 [core]
     editor = vim
-	excludesfile = /Users/jtrent/.gitignore
+	excludesfile = /Users/jaketrent/.gitignore
+	autocrlf = input
 
 [log]
     abbrevCommit = true
@@ -117,4 +118,8 @@
 [filter "hawser"]
 	clean = git hawser clean %f
 	smudge = git hawser smudge %f
+	required = true
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
 	required = true

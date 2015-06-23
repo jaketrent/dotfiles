@@ -45,7 +45,10 @@ go=/usr/local/go/bin
 pg=/Applications/Postgres.app/Contents/Versions/9.3/bin
 nvm=~/.nvm
 devbin=~/dev/bin
-export PATH=$local_node:$homebrew:$rvm:$rbenv:$ruby:$heroku:$java:$gopath:$go:$pg:$nvm:$devbin:$PATH
+psql=/Applications/Postgres.app/Contents/Versions/9.4/bin
+
+export PATH=$local_node:$homebrew:$rvm:$rbenv:$ruby:$heroku:$java:$gopath:$go:$pg:$nvm:$devbin:$psql:$PATH
+export RUBYMINE_JDK=/usr/bin/java
 
 function gc() {
   git clone git@github.com:jaketrent/$1.git
@@ -66,5 +69,3 @@ export CFLAGS=-Qunused-arguments
 export CPPFLAGS=-Qunused-arguments
 ARCHFLAGS="-Wno-error=unused-command-line-argument-hard-error-in-future"
 
-# for flavio/jump
-source `jump-bin --bash-integration`/shell_driver

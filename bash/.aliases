@@ -80,8 +80,9 @@ alias fs="foreman start"
 #ios dev
 alias ios="open /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app"
 
-#bridge
-alias bridge_dbreset='dropdb get_smart_test && createdb get_smart_test && RAILS_ENV=test bin/rails runner "ActiveRecord::Base.connection.execute(\"CREATE SCHEMA hstore; CREATE EXTENSION HSTORE SCHEMA hstore\")" && RAILS_ENV=test bundle exec rake db:migrate'
-alias dbm="bin/rake db:migrate && bin/rake db:migrate RAILS_ENV=test"
-alias bridge_update="git p && be spring stop && npm install && bundle && dbm && grunt build"
- 
+# npm 
+alias ns="npm start"
+alias ni="npm install"
+alias nr="npm run"
+alias nt="npm test" 
+alias ntw="npm run test-watch"
