@@ -13,7 +13,7 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
 fi
 
 # NVM
-#[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh  # This loads NVM
+export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
 # RBENV USE HOMEBREW DIR INSTEAD OF ~/.rbenv
@@ -50,15 +50,6 @@ psql=/Applications/Postgres.app/Contents/Versions/9.4/bin
 export PATH=$local_node:$homebrew:$rvm:$rbenv:$ruby:$heroku:$java:$gopath:$go:$pg:$nvm:$devbin:$psql:$PATH
 export RUBYMINE_JDK=/usr/bin/java
 
-function gc() {
-  git clone git@github.com:jaketrent/$1.git
-}
-function ni() {
-  npm install $1 --save
-}
-function nid() {
-  npm install $1 --save-dev
-}
 export PATH=$HOME/bin:$PATH
 
 eval "$(hub alias -s)"
