@@ -28,6 +28,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PGHOST=/tmp
 export EDITOR=vim
 export GOPATH=$HOME/go
+export ELM_HOME=$(brew --prefix nvm)/$(node -v)/lib/node_modules/elm/share
 
 
 # PATH
