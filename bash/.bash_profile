@@ -33,7 +33,7 @@ export ELM_HOME=$(brew --prefix nvm)/$(node -v)/lib/node_modules/elm/share
 
 # PATH
 local_node=./node_modules/.bin
-homebrew=/usr/local/bin:/usr/local/sbin
+homebrew=/usr/local/bin:/usr/local/sbin:/usr/bin
 #ruby=/usr/local/opt/ruby/bin
 ruby=/Users/jtrent/.rvm/gems/ruby-2.1.5/bin
 heroku=/usr/local/heroku/bin

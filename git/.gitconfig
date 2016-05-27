@@ -57,8 +57,11 @@
     # push origin master
     pom = push origin master
     phm = push heroku master
-    # fetch; rebase
-
+    # push current branch
+    pb = push origin HEAD
+    pr = pull-request
+    dsf = "!f() { [ \"$GIT_PREFIX\" != \"\" ] && cd "$GIT_PREFIX"; git diff --color $@ | diff-so-fancy | less --tabs=4 -RFX; }; f"
+  
     # list aliases
     shortcuts = "!git config -l | grep alias | cut -c 7-"
 
@@ -71,7 +74,7 @@
 
     # list changed files in commit (short diff)
     d = diff-tree --no-commit-id --name-only -r HEAD
-    
+
 [color]
     # Use colors in Git commands that are capable of colored output when outputting to the terminal
     ui = auto
@@ -123,3 +126,13 @@
 	clean = git lfs clean %f
 	smudge = git lfs smudge %f
 	required = true
+[push]
+	default = simple
+[pager]
+	diff = diff-so-fancy | less --tabs=4 -RFX
+	show = diff-so-fancy | less --tabs=4 -RFX
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
