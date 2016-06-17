@@ -23,13 +23,13 @@ values."
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     ;; auto-completion
+     auto-completion
      ;; better-defaults
      emacs-lisp
      osx
      evil-commentary
      javascript
-     ;; git
+     git
      ;; markdown
      ;; org
      ;; (shell :variables
@@ -37,7 +37,7 @@ values."
      ;;        shell-default-position 'bottom)
      ;; spell-checking
      ;; syntax-checking
-     ;; version-control
+     version-control
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -259,7 +259,7 @@ you should place your code here."
     (setq neo-smart-open t)
 
     ;; when using projectile-switch-project, neotree changes root dir
-    (setq projectile-switch-project-action 'neotree-projectile-action)
+    ;; (setq projectile-switch-project-action 'neotree-projectile-action)
 
     ;; Basic Indentation
     (setq-default indent-tabs-mode nil)
@@ -278,12 +278,40 @@ you should place your code here."
             (replace-match "")))))
 
     (setq js-indent-level 2)
+    (setq css-indent-level 2)
 
-    (custom-set-variables  
-     '(js2-basic-offset 2)  
-     '(js2-bounce-indent-p nil)  
-     )
+    ;; (custom-set-variables  
+    ;;  '(js2-basic-offset 2)  
+    ;;  '(js2-bounce-indent-p nil)  
+    ;;  '(css-basic-offset 2)  
+    ;;  '(css-indent-offset 2)  
+    ;;  '(webcss-indent-offset 2)  
+    ;;  )
+    (web-setup-indent 2)
+
+    ;; Word Wrap off
+    (setq-default truncate-lines 1)
+
+    ;; Create file in directory view
+    ;; (define-key dired-mode-map "c" 'find-file)
+
+    (global-linum-mode t)
+
+    (add-to-list 'load-path "~/.emacs.d/lisp/")
 )
+
+;; Indentation from
+;; http://blog.binchen.org/posts/easy-indentation-setup-in-emacs-for-web-development.html
+(defun web-setup-indent (n)
+  (setq coffee-tab-width n) ; coffeescript
+  (setq javascript-indent-level n) ; javascript-mode
+  (setq js-indent-level n) ; js-mode
+  (setq js2-basic-offset n) ; js2-mode
+  (setq web-mode-markup-indent-offset n) ; web-mode, html tag in html file
+  (setq web-mode-css-indent-offset n) ; web-mode, css in html file
+  (setq web-mode-code-indent-offset n) ; web-mode, js code in html file
+  (setq css-indent-offset n) ; css-mode
+  )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.

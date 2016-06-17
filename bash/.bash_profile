@@ -12,9 +12,6 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi
 
-# NVM
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
 
 # RBENV USE HOMEBREW DIR INSTEAD OF ~/.rbenv
 #export RBENV_ROOT=/usr/local/var/rbenv
@@ -33,7 +30,7 @@ export ELM_HOME=$(brew --prefix nvm)/$(node -v)/lib/node_modules/elm/share
 
 # PATH
 local_node=./node_modules/.bin
-homebrew=/usr/local/bin:/usr/local/sbin:/usr/bin
+homebrew=/usr/local/bin:/usr/local/sbin
 #ruby=/usr/local/opt/ruby/bin
 ruby=/Users/jtrent/.rvm/gems/ruby-2.1.5/bin
 heroku=/usr/local/heroku/bin
@@ -61,3 +58,12 @@ export CFLAGS=-Qunused-arguments
 export CPPFLAGS=-Qunused-arguments
 ARCHFLAGS="-Wno-error=unused-command-line-argument-hard-error-in-future"
 
+# NVM
+# export NVM_DIR=~/.nvm
+# source $(brew --prefix nvm)/nvm.sh
+
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
+export NVM_DIR=~/.nvm
+source ~/.nvm/nvm.sh
