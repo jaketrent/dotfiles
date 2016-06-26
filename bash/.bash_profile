@@ -44,8 +44,9 @@ pg=/Applications/Postgres.app/Contents/Versions/9.3/bin
 nvm=~/.nvm
 devbin=~/dev/bin
 psql=/Applications/Postgres.app/Contents/Versions/9.4/bin
+tern=~/dev/tern/bin
 
-export PATH=$local_node:$homebrew:$rvm:$rbenv:$ruby:$heroku:$java:$gopath:$go:$pg:$nvm:$devbin:$psql:$PATH
+export PATH=$local_node:$homebrew:$rvm:$rbenv:$ruby:$heroku:$java:$gopath:$go:$pg:$nvm:$devbin:$psql:$tern:$PATH
 export RUBYMINE_JDK=/usr/bin/java
 
 export PATH=$HOME/bin:$PATH

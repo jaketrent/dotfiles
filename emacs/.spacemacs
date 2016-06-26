@@ -30,6 +30,8 @@ values."
      evil-commentary
      javascript
      git
+     clojure
+     typescript
      ;; markdown
      ;; org
      ;; (shell :variables
@@ -109,11 +111,11 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
-   dotspacemacs-default-font '("Source Code Pro"
-                               :size 13
+   dotspacemacs-default-font '("Hack"
+                               :size 14
                                :weight normal
                                :width normal
-                               :powerline-scale 1.1)
+                               :powerline-scale 1.3)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The leader key accessible in `emacs state' and `insert state'
@@ -135,7 +137,7 @@ values."
    ;; (Not implemented) dotspacemacs-distinguish-gui-ret nil
    ;; The command key used for Evil commands (ex-commands) and
    ;; Emacs commands (M-x).
-   ;; By default the command key is `:' so ex-commands are executed like in Vim
+   ;; By default the command key is `:' so ex-commands are execute like in Vim
    ;; with `:' and Emacs commands are executed with `<leader> :'.
    dotspacemacs-command-key ":"
    ;; If non nil `Y' is remapped to `y$'. (default t)
@@ -296,6 +298,12 @@ you should place your code here."
     ;; (define-key dired-mode-map "c" 'find-file)
 
     (global-linum-mode t)
+
+    (setq powerline-default-separator 'arrow)
+
+    (setq exec-path (append exec-path '("~/dev/tern/bin/")))
+    (add-to-list 'load-path "~/dev/tern/emacs/")
+    (autoload 'tern-mode "tern.el" nil t)
 
     (add-to-list 'load-path "~/.emacs.d/lisp/")
 )
