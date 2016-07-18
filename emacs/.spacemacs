@@ -32,6 +32,8 @@ values."
      git
      clojure
      typescript
+     html
+     elm
      ;; markdown
      ;; org
      ;; (shell :variables
@@ -112,7 +114,7 @@ values."
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
    dotspacemacs-default-font '("Hack"
-                               :size 14
+                               :size 14 
                                :weight normal
                                :width normal
                                :powerline-scale 1.3)
@@ -301,6 +303,10 @@ you should place your code here."
 
     (setq powerline-default-separator 'arrow)
 
+    (setq projectile-enable-caching nil)
+
+    (setq elm-indent-look-past-empty-line nil)
+
     (setq exec-path (append exec-path '("~/dev/tern/bin/")))
     (add-to-list 'load-path "~/dev/tern/emacs/")
     (autoload 'tern-mode "tern.el" nil t)
@@ -319,6 +325,8 @@ you should place your code here."
   (setq web-mode-css-indent-offset n) ; web-mode, css in html file
   (setq web-mode-code-indent-offset n) ; web-mode, js code in html file
   (setq css-indent-offset n) ; css-mode
+  (setq typescript-indent-level n) ; typescript-mode
+  (setq elm-indent-offset n) ; typescript-mode
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
