@@ -1,0 +1,13 @@
+{
+    "profiles": [
+        {
+            "name": "Default profile",
+            "selected": true,
+            "simple_modifications": {
+              "caps_lock": "escape",
+              "left_option": "left_command",
+              "left_command": "left_option"
+            }
+        }
+    ]
+}
