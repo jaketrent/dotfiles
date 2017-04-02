@@ -40,10 +40,10 @@ rvm=$HOME/.rvm/bin
 java=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
 gopath=$GOPATH/bin
 go=/usr/local/go/bin
-pg=/Applications/Postgres.app/Contents/Versions/9.3/bin
+pg=/Applications/Postgres.app/Contents/Versions/latest/bin
 nvm=~/.nvm
 devbin=~/dev/bin
-psql=/Applications/Postgres.app/Contents/Versions/9.4/bin
+psql=/Applications/Postgres.app/Contents/Versions/latest/bin
 tern=~/dev/tern/bin
 
 export PATH=$local_node:$homebrew:$rvm:$rbenv:$ruby:$heroku:$java:$gopath:$go:$pg:$nvm:$devbin:$psql:$tern:$PATH

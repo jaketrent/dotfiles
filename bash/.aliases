@@ -82,8 +82,21 @@ alias ios="open /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Sim
 
 # npm 
 alias ns="npm start"
+alias nsd="npm run start:debug"
+alias nsw="npm run start:watch"
 alias ni="npm install"
 alias nr="npm run"
 alias nt="npm test" 
 alias ntw="npm run test:watch"
 alias ntf="npm run test:functional"
+
+#elm
+alias et="elm-test"
+alias eti="elm-test init"
+
+#editor
+alias ec="emacsclient"
+
+#hugo
+alias h="hugo"
+alias hs="hugo server"

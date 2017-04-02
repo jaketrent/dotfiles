@@ -34,7 +34,10 @@ values."
      typescript
      html
      elm
-     ;; markdown
+     markdown
+     purescript
+     fsharp
+     react
      ;; org
      ;; (shell :variables
      ;;        shell-default-height 30
@@ -42,6 +45,7 @@ values."
      ;; spell-checking
      ;; syntax-checking
      version-control
+     ;; (prettier-js :location (recipe :fetcher github :repo "mrmagooey/spacemacs-prettier-layer"))
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -307,11 +311,31 @@ you should place your code here."
 
     (setq elm-indent-look-past-empty-line nil)
 
+    (setq elm-format-on-save t)
+
+    (defadvice evil-inner-word (around underscore-as-word activate)
+      (let ((table (copy-syntax-table (syntax-table))))
+        (modify-syntax-entry ?_ "w" table)
+        (with-syntax-table table
+          ad-do-it)))
+
     (setq exec-path (append exec-path '("~/dev/tern/bin/")))
     (add-to-list 'load-path "~/dev/tern/emacs/")
     (autoload 'tern-mode "tern.el" nil t)
 
     (add-to-list 'load-path "~/.emacs.d/lisp/")
+
+    ;; Why do you not work?!
+    ;; (require 'prettier-js)
+    ;; (add-hook 'js2-mode-hook
+    ;;           (lambda ()
+    ;;             (add-hook 'before-save-hook 'prettier nil 'make-it-local)))
+    ;; (add-hook 'js-mode-hook
+    ;;           (lambda ()
+    ;;             (add-hook 'before-save-hook 'prettier nil 'make-it-local)))
+
+    (add-hook 'markdown-mode-hook 'toggle-truncate-lines)
+
 )
 
 ;; Indentation from
@@ -328,6 +352,18 @@ you should place your code here."
   (setq typescript-indent-level n) ; typescript-mode
   (setq elm-indent-offset n) ; typescript-mode
   )
+
+(defun xsteve-remove-control-M ()
+  "Remove ^M at end of line in the whole buffer."
+  (interactive)
+  (save-match-data
+    (save-excursion
+      (let ((remove-count 0))
+        (goto-char (point-min))
+        (while (re-search-forward (concat (char-to-string 13) "$") (point-max) t)
+          (setq remove-count (+ remove-count 1))
+          (replace-match "" nil nil))
+        (message (format "%d ^M removed from buffer." remove-count))))))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
