@@ -89,6 +89,11 @@ alias nr="npm run"
 alias nt="npm test" 
 alias ntw="npm run test:watch"
 alias ntf="npm run test:functional"
+alias nrb="npm run build"
+alias nrbw="npm run build:watch"
+alias nrs="npm run storybook"
+alias nrp="npm run publish"
+alias nrd="npm run deploy"
 
 #elm
 alias et="elm-test"
@@ -96,7 +101,11 @@ alias eti="elm-test init"
 
 #editor
 alias ec="emacsclient"
+alias vs="code-insiders"
 
 #hugo
 alias h="hugo"
 alias hs="hugo server"
+
+## flowtype
+alias fc="flow check"

@@ -45,8 +45,10 @@ nvm=~/.nvm
 devbin=~/dev/bin
 psql=/Applications/Postgres.app/Contents/Versions/latest/bin
 tern=~/dev/tern/bin
+cargo=~/.cargo/env
+flutter=~/dev/flutter/bin
 
-export PATH=$local_node:$homebrew:$rvm:$rbenv:$ruby:$heroku:$java:$gopath:$go:$pg:$nvm:$devbin:$psql:$tern:$PATH
+export PATH=$local_node:$homebrew:$rvm:$rbenv:$ruby:$heroku:$java:$gopath:$go:$pg:$nvm:$devbin:$psql:$tern:$cargo:$flutter:$PATH
 export RUBYMINE_JDK=/usr/bin/java
 
 export PATH=$HOME/bin:$PATH

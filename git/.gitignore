@@ -1,3 +1,6 @@
 .idea
 .DS_Store
 .powder
+.vscode
+npm-debug.log
+.#*

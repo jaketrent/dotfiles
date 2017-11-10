@@ -18,6 +18,12 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
+     yaml
+     csv
+     ocaml
+     ;; reason
+     flow-type
+     syntax-checking
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
@@ -38,14 +44,15 @@ values."
      purescript
      fsharp
      react
+     rust
+     spacemacs-prettier
      ;; org
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
-     ;; spell-checking
-     ;; syntax-checking
+     (shell :variables
+            shell-default-shell 'eshell
+            shell-default-height 30
+            shell-default-position 'bottom)
+     spell-checking
      version-control
-     ;; (prettier-js :location (recipe :fetcher github :repo "mrmagooey/spacemacs-prettier-layer"))
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -118,7 +125,7 @@ values."
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
    dotspacemacs-default-font '("Hack"
-                               :size 14 
+                               :size 14
                                :weight normal
                                :width normal
                                :powerline-scale 1.3)
@@ -288,6 +295,15 @@ you should place your code here."
     (setq js-indent-level 2)
     (setq css-indent-level 2)
 
+
+    (defun init-js-mode-config ()
+      (local-set-key (kbd "<tab>") 'yas-expand)
+      )
+
+    ;; add to hook
+    (add-hook 'js2-mode-hook 'init-js-mode-config)
+
+
     ;; (custom-set-variables  
     ;;  '(js2-basic-offset 2)  
     ;;  '(js2-bounce-indent-p nil)  
@@ -325,17 +341,21 @@ you should place your code here."
 
     (add-to-list 'load-path "~/.emacs.d/lisp/")
 
-    ;; Why do you not work?!
-    ;; (require 'prettier-js)
-    ;; (add-hook 'js2-mode-hook
-    ;;           (lambda ()
-    ;;             (add-hook 'before-save-hook 'prettier nil 'make-it-local)))
-    ;; (add-hook 'js-mode-hook
-    ;;           (lambda ()
-    ;;             (add-hook 'before-save-hook 'prettier nil 'make-it-local)))
-
     (add-hook 'markdown-mode-hook 'toggle-truncate-lines)
 
+    ;; prettier settings
+    (setq prettier-js-args '(
+                             "--no-semi"
+                             "--single-quote"
+                             ))
+    (add-hook 'js2-mode-hook 'prettier-js-mode)
+    (add-hook 'react-mode-hook 'prettier-js-mode)
+    ;; (add-hook 'web-mode-hook 'prettier-js-mode)
+
+    ;; (add-to-list 'auto-mode-alist '("\\.js\\'" . react-mode))
+    (add-to-list 'auto-mode-alist '("\\.re\\'" . tuareg-mode))
+
+    (set-terminal-coding-system 'utf-8-unix)
 )
 
 ;; Indentation from
@@ -367,3 +387,18 @@ you should place your code here."
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" default)))
+ '(flycheck-javascript-flow-args (quote ("--respect-pragma"))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
