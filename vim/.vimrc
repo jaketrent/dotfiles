@@ -21,8 +21,12 @@ set number
 set scrolloff=5
 
 
+
 " cursorline highlight
-" set cursorline
+set cursorline
+
+" cursor block for normal, viz, or selection modes
+" set guicursor=n-v-c:block-Cursor
 
 " Default Colors for CursorLine
 " highlight CursorLine ctermbg=Yellow ctermfg=None
@@ -55,10 +59,11 @@ set grepprg=grep\ -In\ --exclude-dir={.git,node_modules,build,.next,__snapshots_
 
 
 
-" always syntax highlight
-syntax on
 
 " --- syntax highlighting ----------------------------
+
+" always syntax highlight
+syntax on
 
 " enable flow in vim-javascript
 let g:javascript_plugin_flow = 1
