@@ -1,3 +1,18 @@
 [submodule "vim/pack/my-plugins/start/ctrlp.vim"]
 	path = vim/pack/my-plugins/start/ctrlp.vim
 	url = git@github.com:ctrlpvim/ctrlp.vim.git
+[submodule "vim/pack/my-plugins/start/cobalt2-vim-theme"]
+	path = vim/pack/my-plugins/start/cobalt2-vim-theme
+	url = git@github.com:GertjanReynaert/cobalt2-vim-theme.git
+[submodule "vim/pack/my-plugins/start/vim-javascript"]
+	path = vim/pack/my-plugins/start/vim-javascript
+	url = git@github.com:pangloss/vim-javascript.git
+[submodule "vim/pack/my-plugins/start/vim-jsx"]
+	path = vim/pack/my-plugins/start/vim-jsx
+	url = git@github.com:mxw/vim-jsx.git
+[submodule "vim/pack/my-plugins/start/vim-airline"]
+	path = vim/pack/my-plugins/start/vim-airline
+	url = git@github.com:vim-airline/vim-airline.git
+[submodule "vim/pack/my-plugins/start/tcomment_vim"]
+	path = vim/pack/my-plugins/start/tcomment_vim
+	url = git@github.com:tomtom/tcomment_vim.git
