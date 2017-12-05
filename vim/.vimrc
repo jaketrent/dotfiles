@@ -1,18 +1,29 @@
-" Visual Mode Orange Background, Black Text
-hi Visual          guifg=#000000 guibg=#FD971F
+" LEADER
+let mapleader=" "
+nnoremap <leader>! :!clear &&<SPACE>
+nnoremap <leader>s :%s//g<LEFT><LEFT>
+nnoremap <leader>e :e **/*
+nnoremap <leader>g :silent grep -r '' . \| :redraw!<LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT>
+nnoremap <leader>c :cfdo %s//g \| :w<LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT>
 
-" Default Colors for CursorLine
-highlight CursorLine guibg=#3E3D32
-highlight Cursor guibg=#A6E22E
+" --- vim-spacemacs ---
+" show discovery popups
+nnoremap <silent> <LEADER> :<C-U>LeaderGuide '<SPACE>'<CR>
+vnoremap <silent> <LEADER> :<C-U>LeaderGuideVisual '<SPACE>'<CR>
 
-" Change Color when entering Insert Mode
-autocmd InsertEnter * highlight  CursorLine guibg=#323D3E
-autocmd InsertEnter * highlight  Cursor guibg=#00AAFF
+" auto change the cwd to current file
+set autochdir
 
-" Revert Color to default when leaving Insert Mode
-autocmd InsertLeave * highlight  CursorLine guibg=#3E3D32
-autocmd InsertLeave * highlight  Cursor guibg=#A6E22E
+" --- prettier
+" format on save
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md Prettier
 
+" prettier config overrides
+let g:prettier#config#semi = 'false'
+let g:prettier#config#single_quote = 'true'
+let g:prettier#config#bracket_spacing = 'true'
+let g:prettier#config#trailing_comma = 'none'
 
 
 
@@ -24,18 +35,6 @@ set scrolloff=5
 
 " cursorline highlight
 set cursorline
-
-" cursor block for normal, viz, or selection modes
-" set guicursor=n-v-c:block-Cursor
-
-" Default Colors for CursorLine
-" highlight CursorLine ctermbg=Yellow ctermfg=None
-
-" Change Color when entering Insert Mode
-" autocmd InsertEnter * highlight  CursorLine ctermbg=Orange ctermfg=White
-
-" Revert Color to default when leaving Insert Mode
-" autocmd InsertLeave * highlight  CursorLine ctermbg=Yellow ctermfg=None
 
 " TABS
 set backspace=indent,eol,start

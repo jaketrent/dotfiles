@@ -109,3 +109,6 @@ alias hs="hugo server"
 
 ## flowtype
 alias fc="flow check"
+
+## tmux
+alias tmux="TERM=screen-256color-bce tmux"
