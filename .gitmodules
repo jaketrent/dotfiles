@@ -52,3 +52,6 @@
 [submodule "vim/pack/my-plugins/start/emmet-vim"]
 	path = vim/pack/my-plugins/start/emmet-vim
 	url = https://github.com/mattn/emmet-vim
+[submodule "vim/pack/my-plugins/start/vim-flow"]
+	path = vim/pack/my-plugins/start/vim-flow
+	url = https://github.com/flowtype/vim-flow
