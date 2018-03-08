@@ -94,6 +94,7 @@ alias nrbw="npm run build:watch"
 alias nrs="npm run storybook"
 alias nrp="npm run publish"
 alias nrd="npm run deploy"
+alias nrf="npm run flow"
 
 #elm
 alias et="elm-test"
