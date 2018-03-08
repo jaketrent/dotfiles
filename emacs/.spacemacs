@@ -18,12 +18,14 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
+     sql
      yaml
      csv
      ocaml
      ;; reason
      flow-type
      syntax-checking
+     go
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
@@ -125,7 +127,7 @@ values."
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
    dotspacemacs-default-font '("Hack"
-                               :size 14
+                               :size 14 
                                :weight normal
                                :width normal
                                :powerline-scale 1.3)
@@ -348,9 +350,10 @@ you should place your code here."
                              "--no-semi"
                              "--single-quote"
                              ))
+    (add-hook 'javascript-mode-hook 'prettier-js-mode)
     (add-hook 'js2-mode-hook 'prettier-js-mode)
     (add-hook 'react-mode-hook 'prettier-js-mode)
-    ;; (add-hook 'web-mode-hook 'prettier-js-mode)
+    (add-hook 'web-mode-hook 'prettier-js-mode)
 
     ;; (add-to-list 'auto-mode-alist '("\\.js\\'" . react-mode))
     (add-to-list 'auto-mode-alist '("\\.re\\'" . tuareg-mode))
