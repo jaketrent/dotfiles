@@ -54,19 +54,8 @@ alias spotoff="sudo mdutil -a -i off"
 # Enable Spotlight
 alias spoton="sudo mdutil -a -i on"
 
-# Ruby
-alias be="bundle exec"
-alias bi="bundle install"
-alias harmony="node --use-strict $(node --v8-options | grep harm | awk '{print $1}' | xargs)"
-
 # Highlighting for Keynote
 alias keyhi="pbpaste | highlight --syntax=js -O rtf | pbcopy"
-
-# Broccoli
-alias bs="broccoli serve"
-
-# RubyMine
-alias rubym="/Applications/RubyMine.app/Contents/MacOS/rubymine"
 
 # Git
 alias g="git"
@@ -101,7 +90,7 @@ alias et="elm-test"
 alias eti="elm-test init"
 
 #editor
-alias ec="emacsclient"
+alias e="emacsclient -t"
 alias vs="code-insiders"
 
 #hugo
