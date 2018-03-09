@@ -21,9 +21,8 @@ values."
      sql
      yaml
      csv
-     ocaml
+     ;; ocaml
      ;; reason
-     flow-type
      syntax-checking
      go
      ;; ----------------------------------------------------------------
@@ -126,8 +125,8 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
-   dotspacemacs-default-font '("Hack"
-                               :size 14 
+   dotspacemacs-default-font '("Source Code Pro for Powerline Medium"
+                               :size 18 
                                :weight normal
                                :width normal
                                :powerline-scale 1.3)
