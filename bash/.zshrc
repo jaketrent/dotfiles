@@ -153,3 +153,4 @@ ARCHFLAGS="-Wno-error=unused-command-line-argument-hard-error-in-future"
 
 # support emacs terminal launching correctly
 export ALTERNATE_EDITOR=""
+prompt_context() {}
