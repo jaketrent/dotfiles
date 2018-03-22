@@ -37,29 +37,29 @@ values."
      evil-commentary
      javascript
      git
-     clojure
+     ;; clojure
      typescript
      html
      elm
      markdown
-     purescript
-     fsharp
+     ;; purescript
+     ;; fsharp
      react
-     rust
+     ;; rust
      spacemacs-prettier
      ;; org
      (shell :variables
             shell-default-shell 'eshell
             shell-default-height 30
             shell-default-position 'bottom)
-     spell-checking
+     ;; spell-checking
      version-control
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(company-flow)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -297,12 +297,12 @@ you should place your code here."
     (setq css-indent-level 2)
 
 
-    (defun init-js-mode-config ()
-      (local-set-key (kbd "<tab>") 'yas-expand)
-      )
+    ;; (defun init-js-mode-config ()
+    ;;   (local-set-key (kbd "<tab>") 'yas-expand)
+    ;;   )
 
     ;; add to hook
-    (add-hook 'js2-mode-hook 'init-js-mode-config)
+    ;; (add-hook 'js2-mode-hook 'init-js-mode-config)
 
 
     ;; (custom-set-variables  
@@ -336,9 +336,9 @@ you should place your code here."
         (with-syntax-table table
           ad-do-it)))
 
-    (setq exec-path (append exec-path '("~/dev/tern/bin/")))
-    (add-to-list 'load-path "~/dev/tern/emacs/")
-    (autoload 'tern-mode "tern.el" nil t)
+    ;; (setq exec-path (append exec-path '("~/dev/tern/bin/")))
+    ;; (add-to-list 'load-path "~/dev/tern/emacs/")
+    ;; (autoload 'tern-mode "tern.el" nil t)
 
     (add-to-list 'load-path "~/.emacs.d/lisp/")
 
@@ -353,6 +353,11 @@ you should place your code here."
     (add-hook 'js2-mode-hook 'prettier-js-mode)
     (add-hook 'react-mode-hook 'prettier-js-mode)
     (add-hook 'web-mode-hook 'prettier-js-mode)
+
+    ;; (setenv "PATH" (concat (getenv "PATH") ":./node_modules/.bin:~/.nvm/version/node/v9.5.0/bin"))
+
+    (load-file "~/dev/tbinetruy_config/spacemacs/flow/flow.el")
+    (init-flowjs)
 
     ;; (add-to-list 'auto-mode-alist '("\\.js\\'" . react-mode))
     (add-to-list 'auto-mode-alist '("\\.re\\'" . tuareg-mode))
@@ -397,7 +402,10 @@ you should place your code here."
  '(custom-safe-themes
    (quote
     ("fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" default)))
- '(flycheck-javascript-flow-args (quote ("--respect-pragma"))))
+ '(flycheck-javascript-flow-args (quote ("--respect-pragma")))
+ '(package-selected-packages
+   (quote
+    (helm-flycheck company-flow flycheck-flow prettier-js yaml-mode xterm-color web-mode web-beautify toml-mode tide typescript-mode tagedit sql-indent smeargle slim-mode shell-pop scss-mode sass-mode reveal-in-osx-finder racer pug-mode psci purescript-mode psc-ide pbcopy paradox osx-trash osx-dictionary orgit multi-term mmm-mode markdown-toc markdown-mode magit-gitflow livid-mode skewer-mode simple-httpd less-css-mode launchctl json-mode json-snatcher json-reformat js2-refactor js2-mode js-doc helm-gitignore helm-css-scss helm-company helm-c-yasnippet haml-mode go-guru go-eldoc gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md fuzzy fsharp-mode company-quickhelp flyspell-correct-helm flyspell-correct flycheck-rust flycheck-pos-tip pos-tip flycheck-elm flycheck evil-magit magit magit-popup git-commit ghub let-alist with-editor evil-commentary eshell-z eshell-prompt-extras esh-help emmet-mode elm-mode diff-hl csv-mode company-web web-completion-data company-tern dash-functional tern company-statistics company-go go-mode company coffee-mode clojure-snippets clj-refactor inflections edn multiple-cursors paredit peg cider-eval-sexp-fu cider seq spinner queue clojure-mode cargo rust-mode auto-yasnippet yasnippet auto-dictionary ac-ispell auto-complete ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hydra hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump diminish define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
