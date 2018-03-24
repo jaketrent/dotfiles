@@ -97,9 +97,6 @@ source $ZSH/oh-my-zsh.sh
 # copied, then modified, from .bash_profile:
 
 # nvm first to support other cmds
-export NVM_DIR=~/.nvm
-source ~/.nvm/nvm.sh
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # DOTFILES
 for file in ~/.{aliases,secrets}; do
@@ -112,45 +109,15 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi
 
-
 # RBENV USE HOMEBREW DIR INSTEAD OF ~/.rbenv
 #export RBENV_ROOT=/usr/local/var/rbenv
 
-# EXPORTS
-export PGHOST=/tmp
-export EDITOR=vim
-export GOPATH=$HOME/go
-export ELM_HOME=$(brew --prefix nvm)/$(node -v)/lib/node_modules/elm/share
-
-# PATH
-local_node=./node_modules/.bin
-homebrew=/usr/local/bin:/usr/local/sbin
-heroku=/usr/local/heroku/bin
-#java=/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin
-java=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
-gopath=$GOPATH/bin
-go=/usr/local/go/bin
-pg=/Applications/Postgres.app/Contents/Versions/latest/bin
-nvm=~/.nvm
-devbin=~/dev/bin
-psql=/Applications/Postgres.app/Contents/Versions/latest/bin
-tern=~/dev/tern/bin
-cargo=~/.cargo/env
-
-export PATH=$local_node:$homebrew::$heroku:$java:$gopath:$go:$pg:$nvm:$devbin:$psql:$tern:$cargo:$PATH
-export RUBYMINE_JDK=/usr/bin/java
-
-export PATH=$HOME/bin:$PATH
-
 eval "$(hub alias -s)"
-
 
 # attempted pip fix
 export CFLAGS=-Qunused-arguments
 export CPPFLAGS=-Qunused-arguments
 ARCHFLAGS="-Wno-error=unused-command-line-argument-hard-error-in-future"
 
-
-# support emacs terminal launching correctly
-export ALTERNATE_EDITOR=""
+# rm user@hostname from prompt
 prompt_context() {}
