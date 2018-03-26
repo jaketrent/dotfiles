@@ -23,11 +23,10 @@ devbin=~/dev/bin
 psql=/Applications/Postgres.app/Contents/Versions/latest/bin
 tern=~/dev/tern/bin
 cargo=~/.cargo/env
+homebin=~/bin
 
-export PATH=$local_node:$homebrew::$heroku:$java:$gopath:$go:$pg:$nvm:$devbin:$psql:$tern:$cargo:$PATH
+export PATH=$homebin:$local_node:$homebrew::$heroku:$java:$gopath:$go:$pg:$nvm:$devbin:$psql:$tern:$cargo:$PATH
 export RUBYMINE_JDK=/usr/bin/java
-
-export PATH=$HOME/bin:$PATH
 
 # support emacs terminal launching correctly
 export ALTERNATE_EDITOR=""
