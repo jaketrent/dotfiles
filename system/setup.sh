@@ -49,7 +49,7 @@ nvm install 9.5.0
 
 # editor
 brew tap d12frosted/emacs-plus
-brew install emacs-plus --HEAD --with-natural-title-bars
+brew install emacs-plus --HEAD --with-no-title-bars
 brew link emacs-plus
 cd ~/ && ln -s ~/dev/dotfiles/emac/.spacemacs
 cd ~/ && git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
@@ -78,8 +78,11 @@ open /Applications/Font\ Book.app
 
 # tmux
 brew install tmux
-cd ~/ && ln -s ~/dev/dotfiles/git/.gitignore
+cd ~/ && ln -s ~/dev/dotfiles/tmux/.tmux.conf
 
 # misc
+brew install the_silver_searcher
+brew cask install tunnelblick
 brew install hub
 brew cask install bartender
+brew cask install dash
