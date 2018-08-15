@@ -18,6 +18,7 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
+     fsharp
      sql
      yaml
      csv
@@ -324,7 +325,7 @@ you should place your code here."
 
     (setq powerline-default-separator 'arrow)
 
-    (setq projectile-enable-caching nil)
+    ;; (setq projectile-enable-caching nil)
 
     (setq elm-indent-look-past-empty-line nil)
 
@@ -352,17 +353,22 @@ you should place your code here."
     (add-hook 'javascript-mode-hook 'prettier-js-mode)
     (add-hook 'js2-mode-hook 'prettier-js-mode)
     (add-hook 'react-mode-hook 'prettier-js-mode)
-    (add-hook 'web-mode-hook 'prettier-js-mode)
+
+    ;; (add-hook 'web-mode-hook 'prettier-js-mode)
 
     ;; (setenv "PATH" (concat (getenv "PATH") ":./node_modules/.bin:~/.nvm/version/node/v9.5.0/bin"))
 
-    (load-file "~/dev/tbinetruy_config/spacemacs/flow/flow.el")
-    (init-flowjs)
+    ;; (load-file "~/dev/tbinetruy_config/spacemacs/flow/flow.el")
+    ;; (init-flowjs)
 
     ;; (add-to-list 'auto-mode-alist '("\\.js\\'" . react-mode))
     (add-to-list 'auto-mode-alist '("\\.re\\'" . tuareg-mode))
 
     (set-terminal-coding-system 'utf-8-unix)
+    (setq projectile-enable-caching t)
+
+    (setq js2-mode-show-parse-errors nil)
+    (setq js2-mode-show-strict-warnings nil)
 )
 
 ;; Indentation from
