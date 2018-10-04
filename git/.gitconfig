@@ -38,7 +38,7 @@
     # Grep on filename
     f = "!git ls-files | grep -i"
     # reset to last commit on HEAD
-    kill = reset --hard HEAD
+    rh = reset --hard HEAD
     # prune tracked branches on origin
     prn = remote prune origin
     # shotgun
