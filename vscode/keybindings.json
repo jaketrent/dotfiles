@@ -71,12 +71,12 @@
     "when": "breadcrumbsActive && breadcrumbsVisible"
   },
   {
-    "key": "c f",
+    "key": "space f",
     "command": "explorer.newFile",
     "when": "explorerViewletFocus"
   },
   {
-    "key": "c d",
+    "key": "space d",
     "command": "explorer.newFolder",
     "when": "explorerViewletFocus"
   }
