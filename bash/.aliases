@@ -105,6 +105,7 @@ alias tmux="TERM=screen-256color-bce tmux"
 
 ## dotnet
 alias dn="dotnet"
+alias dnb="dotnet build"
 alias dnt="dotnet test"
 alias dnr="dotnet run"
 alias dnus="dotnet user-secrets"
