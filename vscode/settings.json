@@ -316,6 +316,16 @@
       ]
     },
     {
+      "before": ["<leader>", "h", "t"],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.showHover",
+          "args": []
+        }
+      ]
+    },
+    {
       "before": ["<leader>", "i", "s"],
       "after": [],
       "commands": [
@@ -676,5 +686,7 @@
   "workbench.colorTheme": "Visual Studio Dark",
   "workbench.startupEditor": "newUntitledFile",
   "codestream.email": "trent.jake@gmail.com",
-  "editor.accessibilitySupport": "off"
+  "editor.accessibilitySupport": "off",
+  "extensions.ignoreRecommendations": false,
+  "editor.formatOnSave": true
 }
