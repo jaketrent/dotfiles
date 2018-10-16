@@ -121,3 +121,5 @@ ARCHFLAGS="-Wno-error=unused-command-line-argument-hard-error-in-future"
 
 # rm user@hostname from prompt
 prompt_context() {}
+
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
