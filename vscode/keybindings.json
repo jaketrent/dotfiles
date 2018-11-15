@@ -79,5 +79,13 @@
     "key": "space d",
     "command": "explorer.newFolder",
     "when": "explorerViewletFocus"
+  },
+  {
+    "key": "shift+cmd+j",
+    "command": "workbench.action.terminal.focusNext"
+  },
+  {
+    "key": "shift+cmd+k",
+    "command": "workbench.action.terminal.focusPrevious"
   }
 ]

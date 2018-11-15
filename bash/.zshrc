@@ -123,3 +123,6 @@ ARCHFLAGS="-Wno-error=unused-command-line-argument-hard-error-in-future"
 prompt_context() {}
 
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+# heroku autocomplete setup
+HEROKU_AC_ZSH_SETUP_PATH=/Users/jaketrent/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;

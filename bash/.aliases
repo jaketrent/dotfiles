@@ -78,6 +78,7 @@ alias nr="npm run"
 alias nt="npm test" 
 alias ntw="npm run test:watch"
 alias ntf="npm run test:functional"
+alias ntus="npm run test:updateSnapshot"
 alias nrb="npm run build"
 alias nrbw="npm run build:watch"
 alias nrs="npm run storybook"
@@ -102,6 +103,9 @@ alias f="flow"
 
 ## tmux
 alias tmux="TERM=screen-256color-bce tmux"
+alias t="TERM=screen-256color-bce tmux"
+alias tks="tmux kill-session"
+alias tks!="tmux kill-server"
 
 ## dotnet
 alias dn="dotnet"

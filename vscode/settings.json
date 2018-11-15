@@ -2,7 +2,7 @@
   "workbench.activityBar.visible": false,
   "editor.tabSize": 2,
   "editor.minimap.enabled": false,
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 1.8,
   "vim.leader": "<space>",
   "vim.normalModeKeyBindingsNonRecursive": [
     {
@@ -236,6 +236,16 @@
       ]
     },
     {
+      "before": ["g", "d"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.goToDeclaration",
+          "args": []
+        }
+      ]
+    },
+    {
       "before": ["<leader>", "g", "f"],
       "after": [],
       "commands": [
@@ -438,6 +448,16 @@
       ]
     },
     {
+      "before": ["<leader>", "r", "r"],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.rename",
+          "args": []
+        }
+      ]
+    },
+    {
       "before": ["<leader>", "r", "s"],
       "after": [],
       "commands": [
@@ -553,6 +573,16 @@
       "commands": [
         {
           "command": "workbench.action.closeEditorsInGroup",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "w", "t"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.terminal.focus",
           "args": []
         }
       ]
@@ -687,6 +717,10 @@
   "workbench.startupEditor": "newUntitledFile",
   "codestream.email": "trent.jake@gmail.com",
   "editor.accessibilitySupport": "off",
-  "extensions.ignoreRecommendations": false,
-  "editor.formatOnSave": true
+  "extensions.ignoreRecommendations": true,
+  "editor.fontSize": 16,
+  "eslint.alwaysShowStatus": true,
+  "editor.formatOnSave": true,
+  "terminal.integrated.fontFamily": "Roboto Mono for Powerline",
+  "terminal.integrated.fontSize": 16
 }

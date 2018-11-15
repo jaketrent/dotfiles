@@ -3,8 +3,8 @@ let mapleader=" "
 nnoremap <leader>! :!clear &&<SPACE>
 nnoremap <leader>s :%s//g<LEFT><LEFT>
 nnoremap <leader>e :e **/*
-nnoremap <leader>g :silent grep -r '' . \| :redraw!<LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT>
-nnoremap <leader>c :cfdo %s//g \| :w<LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT>
+" nnoremap <leader>g :silent grep -r '' . \| :redraw!<LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT>
+" nnoremap <leader>c :cfdo %s//g \| :w<LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT>
 
 " --- vim-spacemacs ---
 " show discovery popups
