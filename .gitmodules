@@ -55,3 +55,9 @@
 [submodule "vim/pack/my-plugins/start/vim-flow"]
 	path = vim/pack/my-plugins/start/vim-flow
 	url = https://github.com/flowtype/vim-flow
+[submodule "vimMinimal/pack/git-plugins/start/ale"]
+	path = vimMinimal/pack/git-plugins/start/ale
+	url = https://github.com/w0rp/ale.git
+[submodule "vimMinimal/pack/git-plugins/start/vim-flow"]
+	path = vimMinimal/pack/git-plugins/start/vim-flow
+	url = git://github.com/flowtype/vim-flow.git

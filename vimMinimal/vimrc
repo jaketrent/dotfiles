@@ -53,4 +53,85 @@ set undofile
 set undodir     =$HOME/.vim/files/undo/
 set viminfo     ='100,n$HOME/.vim/files/info/viminfo
 
+
+" custom
+
 set autochdir               " uses current dir when using :split
+set directory=~/.vim/tmp    " set swap file location
+set number                  " turn on line numbers
+set relativenumber          " turn on relative line numbers
+set wrap!                   " turn off line wrap
+set omnifunc=syntaxcomplete#Complete " turn on omni completion
+
+" Asynchronous Lint Engine (ALE)
+" Limit linters used for js to just flow; can add more
+" from https://flow.org/en/docs/editors/vim/
+
+let g:ale_linters = { 'javascript': ['flow'] }
+highlight clear ALEErrorSign " otherwise uses error bg color (typically red)
+highlight clear ALEWarningSign " otherwise uses error bg color (typically red)
+let g:ale_sign_error = 'X' " could use emoji
+let g:ale_sign_warning = '?' " could use emoji
+let g:ale_statusline_format = ['X %d', '? %d', '']
+" %linter% is the name of the linter that provided the message
+" %s is the error or warning message
+let g:ale_echo_msg_format = '%linter% says %s'
+" Map keys to navigate between lines with errors and warnings.
+nnoremap <leader>an :ALENextWrap<cr>
+nnoremap <leader>ap :ALEPreviousWrap<cr>
+
+" flow-vim
+" from https://github.com/flowtype/vim-flow
+
+let g:flow#enable = 1 " flow check on save
+" let g:flow#flowpath = './node_modules/.bin/flow' " custom path to flow (if `flow` not in PATH)
+let g:flow#showquickfix = 1 " set to 0 if rather use ale quicklist
+nnoremap <leader>ft :FlowType<cr>
+
+" autocomplete 
+
+" remap insert mode key - allows enter key to select the C-N autocomplete menu selection
+inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>" 
+
+
+" " simulate system register copy-paste for in-terminal/non-gui vim
+" function! ClipboardOrXclip(command, register)
+"     if a:register !~ '[+*]' || has('xterm_clipboard') || has('gui_running')
+"         " Just return the original command if the clipboard is accessible
+"         " or it's not a register that should be handled by xsel
+"         return a:command
+"     endif
+" 
+"     " macos clipboard
+"     return "<Esc>:r !pbcopy<CR>"
+" 
+" 
+"     " linux tool for clipboard - http://www.vergenet.net/~conrad/software/xsel/#intro
+"     " if a:register == '+'
+"     "     return "<Esc>:r !xsel -bo<CR>"
+"     " else
+"     "     return "<Esc>:r !xsel -po<CR>"
+"     " endif
+" endfunction
+" nnoremap <silent> <expr> p ClipboardOrXclip('p', v:register)
+
+" macos clipboard setup
+
+" from http://vim.wikia.com/wiki/Mac_OS_X_clipboard_sharing
+" set clipboard=unnamed
+
+" vmap y :.w !pbcopy<CR><CR>
+
+
+function! ClipboardOrPbcopy(command, register)
+    echom "The register.............."
+    echom a:register
+    if a:register !~ '[+*]' || has('clipboard') || has('xterm_clipboard') || has('gui_running')
+        " Just return the original command if the clipboard is accessible
+        " or it's not a register that should be handled by the OS
+        return a:command
+    endif
+
+    return ":.w !pbcopy<CR><CR>" " use xsel on linux?
+endfunction
+nnoremap <silent> <expr> y ClipboardOrPbcopy('y', v:register)
