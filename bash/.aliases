@@ -83,7 +83,7 @@ alias nrb="npm run build"
 alias nrbw="npm run build:watch"
 alias nrs="npm run storybook"
 alias nrp="npm run publish"
-alias nrd="npm run deploy"
+alias nrd="npm run dev"
 alias nrf="npm run flow"
 
 #elm
