@@ -140,3 +140,7 @@ function! ClipboardOrPbcopy(command, register)
     return ":.w !pbcopy<CR><CR>" " use xsel on linux?
 endfunction
 nnoremap <silent> <expr> y ClipboardOrPbcopy('y', v:register)
+
+" fzf
+set rtp+=/usr/local/opt/fzf
+
