@@ -62,6 +62,7 @@ alias g="git"
 
 # Misc bash
 alias j="jump"
+alias c="clear"
 
 # Heroku
 alias fs="foreman start"
@@ -85,6 +86,7 @@ alias nrs="npm run storybook"
 alias nrp="npm run publish"
 alias nrd="npm run dev"
 alias nrf="npm run flow"
+alias nrl="npm run lint"
 
 #elm
 alias et="elm-test"
@@ -113,3 +115,5 @@ alias dnb="dotnet build"
 alias dnt="dotnet test"
 alias dnr="dotnet run"
 alias dnus="dotnet user-secrets"
+
+alias whatsmyip="dig @resolver1.opendns.com ANY myip.opendns.com +short"

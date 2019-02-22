@@ -61,3 +61,18 @@
 [submodule "vimMinimal/pack/git-plugins/start/vim-flow"]
 	path = vimMinimal/pack/git-plugins/start/vim-flow
 	url = git://github.com/flowtype/vim-flow.git
+[submodule "vimMinimal/pack/git-plugins/start/typescript-vim"]
+	path = vimMinimal/pack/git-plugins/start/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim
+[submodule "vimMinimal/pack/git-plugins/start/tsuquyomi"]
+	path = vimMinimal/pack/git-plugins/start/tsuquyomi
+	url = https://github.com/Quramy/tsuquyomi
+[submodule "iterm/dankneon"]
+	path = iterm/dankneon
+	url = git@github.com:DankNeon/iterm.git
+[submodule "vimMinimal/colors/dankneon"]
+	path = vimMinimal/colors/dankneon
+	url = git@github.com:DankNeon/vim.git
+[submodule "vimMinimal/pack/git-plugins/start/fzf.vim"]
+	path = vimMinimal/pack/git-plugins/start/fzf.vim
+	url = git@github.com:junegunn/fzf.vim.git

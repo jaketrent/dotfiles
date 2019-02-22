@@ -128,3 +128,6 @@ prompt_context() {}
 HEROKU_AC_ZSH_SETUP_PATH=/Users/jaketrent/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# remove git info from prompt
+# PROMPT="$fg[green]%~ $fg[white]$ "
