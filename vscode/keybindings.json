@@ -1,17 +1,17 @@
 // Place your key bindings in this file to overwrite the defaults
 [
   {
-    "key": "ctrl+j",
+    "key": "ctrl+n",
     "command": "-editor.action.joinLines",
     "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "ctrl+k",
+    "key": "ctrl+p",
     "command": "-deleteAllRight",
     "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "ctrl+j",
+    "key": "ctrl+n",
     "command": "selectNextSuggestion",
     "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
   },
@@ -21,7 +21,7 @@
     "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
   },
   {
-    "key": "ctrl+k",
+    "key": "ctrl+p",
     "command": "selectPrevSuggestion",
     "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
   },
@@ -31,7 +31,7 @@
     "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
   },
   {
-    "key": "ctrl+j",
+    "key": "ctrl+n",
     "command": "workbench.action.quickOpenSelectNext",
     "when": "inQuickOpen"
   },
@@ -41,7 +41,7 @@
     "when": "inQuickOpen"
   },
   {
-    "key": "ctrl+k",
+    "key": "ctrl+p",
     "command": "workbench.action.quickOpenSelectPrevious",
     "when": "inQuickOpen"
   },
@@ -81,11 +81,11 @@
     "when": "explorerViewletFocus"
   },
   {
-    "key": "shift+cmd+j",
+    "key": "shift+cmd+n",
     "command": "workbench.action.terminal.focusNext"
   },
   {
-    "key": "shift+cmd+k",
+    "key": "shift+cmd+p",
     "command": "workbench.action.terminal.focusPrevious"
   }
 ]
