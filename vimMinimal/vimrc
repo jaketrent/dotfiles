@@ -66,7 +66,7 @@ set omnifunc=syntaxcomplete#Complete " turn on omni completion
 " Asynchronous Lint Engine (ALE)
 " Limit linters used for js to just flow; can add more
 " from https://flow.org/en/docs/editors/vim/
-let g:ale_linters = { 'javascript': ['flow'] }
+let g:ale_linters = { 'javascript': ['flow'], 'typescript': [] }
 highlight clear ALEErrorSign " otherwise uses error bg color (typically red)
 highlight clear ALEWarningSign " otherwise uses error bg color (typically red)
 let g:ale_sign_error = 'X' " could use emoji
@@ -82,15 +82,16 @@ nnoremap <leader>ap :ALEPreviousWrap<cr>
 " prettier
 let g:ale_fixers = {
 \   'javascript': ['prettier'],
+\   'typescript': ['prettier'],
 \   'css': ['prettier'],
 \}
 let g:ale_fix_on_save = 1
 
 " flow-vim
 " from https://github.com/flowtype/vim-flow
-let g:flow#enable = 1 " flow check on save
+" let g:flow#enable = 1 " flow check on save
 " let g:flow#flowpath = './node_modules/.bin/flow' " custom path to flow (if `flow` not in PATH)
-let g:flow#showquickfix = 1 " set to 0 if rather use ale quicklist
+" let g:flow#showruickfix = 0 " set to 0 if rather use ale quicklist
 nnoremap <leader>ft :FlowType<cr>
 
 " autocomplete 
@@ -143,4 +144,11 @@ nnoremap <silent> <expr> y ClipboardOrPbcopy('y', v:register)
 
 " fzf
 set rtp+=/usr/local/opt/fzf
+"
+" Color/Theme
+colorscheme snazzy
+
+let g:lightline = {
+      \ 'colorscheme': 'snazzy',
+      \ }
 
