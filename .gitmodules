@@ -76,3 +76,9 @@
 [submodule "vimMinimal/pack/git-plugins/start/fzf.vim"]
 	path = vimMinimal/pack/git-plugins/start/fzf.vim
 	url = git@github.com:junegunn/fzf.vim.git
+[submodule "vim/pack/my-plugins/start/lightline.vim"]
+	path = vim/pack/my-plugins/start/lightline.vim
+	url = git@github.com:itchyny/lightline.vim.git
+[submodule "vimMinimal/pack/git-plugins/start/lightline.vim"]
+	path = vimMinimal/pack/git-plugins/start/lightline.vim
+	url = git@github.com:itchyny/lightline.vim.git
