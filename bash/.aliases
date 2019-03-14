@@ -88,6 +88,9 @@ alias nrd="npm run dev"
 alias nrf="npm run flow"
 alias nrl="npm run lint"
 
+# nvm
+alias nu="nvm use"
+
 #elm
 alias et="elm-test"
 alias eti="elm-test init"
