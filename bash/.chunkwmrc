@@ -131,7 +131,7 @@ chunkc set ffm_standby_on_float          1
 
 chunkc core::load border.so
 chunkc core::load tiling.so
-chunkc core::load ffm.so
+# chunkc core::load ffm.so
 
 #
 # NOTE: sample rules for the tiling plugin
@@ -140,5 +140,10 @@ chunkc core::load ffm.so
 chunkc tiling::rule --owner Finder --name Copy --state float &
 chunkc tiling::rule --owner \"App Store\" --state float &
 chunkc tiling::rule --owner \"Authy Desktop\" --state float &
+chunkc tiling::rule --owner \"FaceTime\" --state float &
 chunkc tiling::rule --owner \"KeePassXC\" --state float &
+chunkc tiling::rule --owner \"Google Chrome\" --state float &
+chunkc tiling::rule --owner \"Slack\" --state float &
+chunkc tiling::rule --owner \"mpv\" --state tile &
+chunkc tiling::rule --owner \"zoom.us\" --state float &
 chunkc tiling::rule --owner Emacs --except "^$" --state tile &
