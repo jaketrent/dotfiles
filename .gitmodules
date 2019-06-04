@@ -82,3 +82,27 @@
 [submodule "vimMinimal/pack/git-plugins/start/lightline.vim"]
 	path = vimMinimal/pack/git-plugins/start/lightline.vim
 	url = git@github.com:itchyny/lightline.vim.git
+[submodule "vimMinimal/pack/git-plugins/start/vim-surround"]
+	path = vimMinimal/pack/git-plugins/start/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule "vimMinimal/pack/git-plugins/start/vim-commentary"]
+	path = vimMinimal/pack/git-plugins/start/vim-commentary
+	url = https://github.com/tpope/vim-commentary
+[submodule "vimMinimal/pack/git-plugins/start/ReplaceWithRegister"]
+	path = vimMinimal/pack/git-plugins/start/ReplaceWithRegister
+	url = https://github.com/vim-scripts/ReplaceWithRegister
+[submodule "vimMinimal/pack/git-plugins/start/vim-sort-motion"]
+	path = vimMinimal/pack/git-plugins/start/vim-sort-motion
+	url = https://github.com/christoomey/vim-sort-motion
+[submodule "vimMinimal/pack/git-plugins/start/vim-system-copy"]
+	path = vimMinimal/pack/git-plugins/start/vim-system-copy
+	url = https://github.com/christoomey/vim-system-copy
+[submodule "vimMinimal/pack/git-plugins/start/vim-test"]
+	path = vimMinimal/pack/git-plugins/start/vim-test
+	url = https://github.com/janko/vim-test
+[submodule "vimMinimal/pack/git-plugins/start/notational-fzf-vim"]
+	path = vimMinimal/pack/git-plugins/start/notational-fzf-vim
+	url = https://github.com/Alok/notational-fzf-vim
+[submodule "vimMinimal/pack/git-plugins/start/vim-go"]
+	path = vimMinimal/pack/git-plugins/start/vim-go
+	url = https://github.com/fatih/vim-go.git

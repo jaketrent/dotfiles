@@ -83,6 +83,7 @@ nnoremap <leader>ap :ALEPreviousWrap<cr>
 let g:ale_fixers = {
 \   'javascript': ['prettier'],
 \   'typescript': ['prettier'],
+\   'scss': ['prettier'],
 \   'css': ['prettier'],
 \}
 let g:ale_fix_on_save = 1
@@ -153,3 +154,20 @@ let g:lightline = {
       \ }
 
 set noswapfile
+
+" Enable code folding
+set foldmethod=indent
+set foldlevel=99
+
+" Python PEP8 code formatting
+" au BufNewFile,BufRead *.py
+"     \ set tabstop=4
+"     \ set softtabstop=4
+"     \ set shiftwidth=4
+"     \ set textwidth=79
+"     \ set expandtab
+"     \ set autoindent
+"     \ set fileformat=unix
+
+" notational-fzf-vim
+let g:nv_search_paths = ['~/Dropbox/temp', '~/dev/jaketrent-blog/content']
