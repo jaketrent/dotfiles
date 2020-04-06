@@ -1,0 +1,34 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "Markdown",
+    "css",
+    "graphql",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "svelte"
+  ],
+  "coc.preferences.rootPatterns": [
+    ".vim",
+    ".git",
+    ".projections.json"
+  ],
+  "emmet.includeLanguages": {"javascript": "javascriptreact"},
+  "eslint.autoFixOnSave": true,
+  "eslint.filetypes": [
+    "jasmine.javascript",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "typescript",
+    "typescriptreact"
+  ],
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "suggest.floatEnable": true,
+  "tsserver.enable": true,
+  "tsserver.enableJavascript": true,
+  "svelte.plugin.typescript.diagnostics.enable": false
+}
