@@ -106,3 +106,6 @@
 [submodule "vimMinimal/pack/git-plugins/start/vim-go"]
 	path = vimMinimal/pack/git-plugins/start/vim-go
 	url = https://github.com/fatih/vim-go.git
+[submodule "vimCoc/autoload/vim-plug"]
+	path = vimCoc/autoload/vim-plug
+	url = https://github.com/junegunn/vim-plug
