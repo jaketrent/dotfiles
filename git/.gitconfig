@@ -98,9 +98,16 @@
     changed = green
     untracked = cyan
 
+[diff]
+    tool = vimdiff
+
+[difftool]
+    prompt = false
+
 [merge]
     # Include summaries of merged commits in newly created merge commit messages
     log = true
+    tool = vimdiff
 
 [apply]
     # Detect whitespace errors when applying a patch
