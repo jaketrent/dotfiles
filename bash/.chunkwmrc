@@ -149,4 +149,6 @@ chunkc tiling::rule --owner \"zoom.us\" --state float &
 chunkc tiling::rule --owner \"VMWare Fusion\" --state float &
 chunkc tiling::rule --owner \"Spotify\" --state float &
 chunkc tiling::rule --owner \"Finder\" --state float &
+chunkc tiling::rule --owner \"VOX\" --state float &
+chunkc tiling::rule --owner \"Cubase LE AI Elements\" --state float &
 chunkc tiling::rule --owner Emacs --except "^$" --state tile &
