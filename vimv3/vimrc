@@ -250,3 +250,7 @@ source ~/.vim/coc.vim
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
+
+set background=light        " for the light version
+let g:one_allow_italics = 1 " I love italic for comments
+colorscheme one
