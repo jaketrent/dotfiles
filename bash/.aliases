@@ -126,3 +126,6 @@ alias whatsmyip="dig @resolver1.opendns.com ANY myip.opendns.com +short"
 ## kubernetes
 alias k="kubectl"
 alias kl="kubelogin"
+
+# vim
+alias v="/usr/local/bin/vim"
