@@ -27,8 +27,9 @@ tern=~/dev/tern/bin
 cargo=~/.cargo/env
 homebin=~/bin
 python=~/Library/Python/2.7/bin
+deno=~/.deno/bin
 
-export PATH=$homebin:$local_node:$homebrew::$heroku:$java:$gopathbin:$gobin:$pg:$nvm:$devbin:$psql:$tern:$cargo:$python:$PATH
+export PATH=$homebin:$local_node:$homebrew::$heroku:$java:$gopathbin:$gobin:$pg:$nvm:$devbin:$psql:$tern:$cargo:$python:$deno:$PATH
 export RUBYMINE_JDK=/usr/bin/java
 
 # support emacs terminal launching correctly

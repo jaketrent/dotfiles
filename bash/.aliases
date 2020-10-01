@@ -63,7 +63,7 @@ alias keyhi="pbpaste | highlight --syntax=js -O rtf | pbcopy"
 alias g="git"
 
 # Misc bash
-alias j="jump"
+# alias j="jump"
 alias c="clear"
 
 # Heroku
@@ -122,3 +122,7 @@ alias dnr="dotnet run"
 alias dnus="dotnet user-secrets"
 
 alias whatsmyip="dig @resolver1.opendns.com ANY myip.opendns.com +short"
+
+## kubernetes
+alias k="kubectl"
+alias kl="kubelogin"
