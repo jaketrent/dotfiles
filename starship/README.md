@@ -1,6 +1,5 @@
 
 # Starship
 
-cd ~/.config
-
-ln -s ~/dev/dotfiles/starship/starship.toml
+cd ~
+sh ~/dev/dotfiles/starship/install.sh

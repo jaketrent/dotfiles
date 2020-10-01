@@ -8,3 +8,13 @@ success_symbol = "[➜](bold green)"     # The "success_symbol" segment is being
 # Disable the package module, hiding it from the prompt completely
 [package]
 disabled = true
+
+[line_break]
+disabled = true
+
+[directory]
+truncate_to_repo = false
+
+[nodejs]
+disabled = true
+
