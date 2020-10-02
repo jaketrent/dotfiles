@@ -266,5 +266,13 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
 
-highlight LineNr term=bold cterm=NONE ctermfg=Blue ctermbg=NONE gui=NONE guifg=Blue guibg=NONE
-highlight SignColumn ctermbg=NONE guibg=NONE
+" Dracula color palette at https://draculatheme.com/contribute
+" Dracula vim palette and highlight groups at https://github.com/dracula/vim/blob/master/colors/dracula.vim
+hi LineNr term=bold cterm=NONE ctermfg=Blue ctermbg=NONE gui=NONE guifg=Blue guibg=NONE
+hi SignColumn ctermbg=NONE guibg=NONE
+hi Pmenu ctermbg=103 guibg=#6272a4
+hi PmenuSel ctermfg=59 ctermbg=222 guifg=#ffb86c guibg=#282a36
+hi Search ctermfg=Yellow ctermbg=Black guifg=Yellow guibg=Black
+hi Search ctermfg=Yellow ctermbg=Black guifg=Yellow guibg=Black
+hi CocHighlightText ctermfg=Yellow ctermbg=Black guifg=Yellow guibg=Black
+hi Visual ctermfg=NONE ctermbg=60 guifg=NONE guibg=#44475a
