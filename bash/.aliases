@@ -61,6 +61,15 @@ alias keyhi="pbpaste | highlight --syntax=js -O rtf | pbcopy"
 
 # Git
 alias g="git"
+alias gp="git pull"
+alias gpom="git pom"
+alias gpb="git pb"
+alias grh="git rh"
+alias gco="git co"
+alias gnew="git co -b"
+alias gc="git commit -m"
+alias gca="git ca -m"
+alias ga="git add"
 
 # Misc bash
 # alias j="jump"
@@ -89,6 +98,24 @@ alias nrf="npm run format"
 alias nrl="npm run lint"
 alias nrp="npm run publish"
 alias nrs="npm run storybook"
+#
+# yarn
+alias ys="yarn start"
+alias ysd="yarn start:debug"
+alias ysw="yarn start:watch"
+alias yi="yarn install"
+alias yr="yarn"
+alias yt="yarn test" 
+alias ytw="yarn test:watch"
+alias ytf="yarn test:functional"
+alias ytus="yarn test:updateSnapshot"
+alias yrb="yarn build"
+alias yrbw="yarn build:watch"
+alias yrd="yarn dev"
+alias yrf="yarn format"
+alias yrl="yarn lint"
+alias yrp="yarn publish"
+alias yrs="yarn storybook"
 
 # nvm
 alias nu="nvm use"
