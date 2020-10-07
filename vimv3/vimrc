@@ -17,7 +17,6 @@ call plug#begin('~/.vim/plugged')
         Plug 'tpope/vim-fugitive'
 
         Plug 'SirVer/ultisnips'
-        Plug 'honza/vim-snippets'
 
         Plug 'dracula/vim', { 'as': 'dracula' }
 
@@ -262,8 +261,8 @@ let g:one_allow_italics = 1 " I love italic for comments
 " SireVer/ultisnips
 " Trigger configuration. You need to change this to something else than <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<c-u>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsJumpForwardTrigger="<c-l>"
+let g:UltiSnipsJumpBackwardTrigger="<c-h>"
 let g:UltiSnipsEditSplit="vertical"
 
 " Dracula color palette at https://draculatheme.com/contribute
