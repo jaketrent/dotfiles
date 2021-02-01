@@ -144,7 +144,6 @@ alias f="flow"
 
 ## tmux
 alias tmux="TERM=screen-256color-bce tmux"
-alias t="TERM=screen-256color-bce tmux"
 alias tks="tmux kill-session"
 alias tks!="tmux kill-server"
 
@@ -163,3 +162,6 @@ alias kl="kubelogin"
 
 # vim
 alias v="/usr/local/bin/vim"
+
+# tree
+alias t="tree"
