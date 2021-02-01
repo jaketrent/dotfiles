@@ -1,11 +1,13 @@
 call plug#begin('~/.vim/plugged')
 
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-        Plug 'pangloss/vim-javascript'
-        Plug 'evanleck/vim-svelte'
+        Plug 'neoclide/coc.nvim', {'branch': 'release'}
+        Plug 'sheerun/vim-polyglot'
 
-	Plug 'tpope/vim-commentary'
-	Plug 'tpope/vim-surround'
+        Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+        Plug 'tpope/vim-commentary'
+        Plug 'tpope/vim-surround'
+        Plug 'tpope/vim-abolish'
+        Plug 'tpope/vim-eunuch'
         Plug 'tpope/vim-abolish'
         Plug 'mileszs/ack.vim'
 
@@ -17,6 +19,9 @@ call plug#begin('~/.vim/plugged')
         Plug 'tpope/vim-fugitive'
 
         Plug 'SirVer/ultisnips'
+
+        Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+        Plug 'junegunn/fzf.vim'
 
         Plug 'dracula/vim', { 'as': 'dracula' }
 
@@ -46,6 +51,7 @@ set showcmd                " Show already typed keys when more are expected.
 
 set incsearch              " Highlight while searching with / or ?.
 set hlsearch               " Keep matches highlighted.
+set wildmenu               " Visual tab complete
 
 set ttyfast                " Faster redrawing.
 set lazyredraw             " Only redraw when necessary.
@@ -236,9 +242,9 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 " end coc.vim
 
 " coc-prettier
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
-vmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+" command! -nargs=0 Prettier :CocCommand prettier.formatFile
+" vmap <leader>f  <Plug>(coc-format-selected)
+" nmap <leader>f  <Plug>(coc-format-selected)
 
 " typescript/tsx
 augroup SyntaxSettings
@@ -246,6 +252,13 @@ augroup SyntaxSettings
     autocmd BufNewFile,BufRead *.tsx set filetype=typescript
 augroup END
 
+
+" vim-fugitive
+set diffopt+=vertical
+
+" junegunn/fzf.vim
+let g:fzf_preview_window = ['up:40%:hidden', 'ctrl-/']
+let g:fzf_layout = { 'down': '~40%' }
 
 
 source ~/.vim/coc.vim
@@ -269,7 +282,7 @@ let g:UltiSnipsEditSplit="vertical"
 " Dracula vim palette and highlight groups at https://github.com/dracula/vim/blob/master/colors/dracula.vim
 hi LineNr term=bold cterm=NONE ctermfg=Blue ctermbg=NONE gui=NONE guifg=Blue guibg=NONE
 hi SignColumn ctermbg=NONE guibg=NONE
-hi Pmenu ctermbg=103 guibg=#6272a4
+hi Pmenu ctermbg=59 guibg=#282a36
 hi PmenuSel ctermfg=59 ctermbg=222 guifg=#ffb86c guibg=#282a36
 hi Search ctermfg=Yellow ctermbg=Black guifg=Yellow guibg=Black
 hi Search ctermfg=Yellow ctermbg=Black guifg=Yellow guibg=Black
