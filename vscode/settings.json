@@ -8,7 +8,6 @@
   "workbench.editor.showTabs": false,
   "breadcrumbs.enabled": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "workbench.colorTheme": "Visual Studio Light",
   "workbench.startupEditor": "newUntitledFile",
   "editor.accessibilitySupport": "off",
   "extensions.ignoreRecommendations": true,
