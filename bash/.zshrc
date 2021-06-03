@@ -157,3 +157,8 @@ load-nvmrc
 alias convertmp3="find . -name \"*.flac\" -exec ffmpeg -i {} -ab 160k -map_metadata 0 -id3v2_version 3 {}.mp3 \;"
 
 eval "$(starship init zsh)"
+
+[ -s "/Users/jaketrent/.jabba/jabba.sh" ] && source "/Users/jaketrent/.jabba/jabba.sh"
+
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"

@@ -165,3 +165,9 @@ alias v="/usr/local/bin/vim"
 
 # tree
 alias t="tree"
+
+# leinigen
+alias lt="lein test"
+
+# rubymine
+alias rbm="/Applications/RubyMine.app/Contents/MacOS/rubymine"
