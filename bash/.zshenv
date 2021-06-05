@@ -28,8 +28,9 @@ cargo=~/.cargo/env
 homebin=~/bin
 python=~/Library/Python/3.9/bin
 deno=~/.deno/bin
+core_utils=/usr/local/Cellar/coreutils/*/libexec/gnubin
 
-export PATH=$homebin:$local_node:$homebrew::$heroku:$java:$gopathbin:$gobin:$pg:$nvm:$devbin:$psql:$tern:$cargo:$python:$deno:$PATH
+export PATH=$core_utils:$homebin:$local_node:$homebrew::$heroku:$java:$gopathbin:$gobin:$pg:$nvm:$devbin:$psql:$tern:$cargo:$python:$deno:$PATH
 export RUBYMINE_JDK=/usr/bin/java
 
 # support emacs terminal launching correctly
