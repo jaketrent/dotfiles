@@ -23,6 +23,9 @@ call plug#begin('~/.vim/plugged')
         Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
         Plug 'junegunn/fzf.vim'
 
+        Plug 'agarrharr/consolation-vim'
+        Plug 'ruanyl/vim-gh-line'
+
         Plug 'dracula/vim', { 'as': 'dracula' }
 
 call plug#end()
@@ -247,9 +250,10 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 " nmap <leader>f  <Plug>(coc-format-selected)
 
 " typescript/tsx
-augroup SyntaxSettings
-    autocmd!
-    autocmd BufNewFile,BufRead *.tsx set filetype=typescript
+augroup ReactFiletypes
+  autocmd!
+  autocmd BufRead,BufNewFile *.jsx set filetype=javascriptreact
+  autocmd BufRead,BufNewFile *.tsx set filetype=typescriptreact
 augroup END
 
 
@@ -288,3 +292,4 @@ hi Search ctermfg=Yellow ctermbg=Black guifg=Yellow guibg=Black
 hi Search ctermfg=Yellow ctermbg=Black guifg=Yellow guibg=Black
 hi CocHighlightText ctermfg=Yellow ctermbg=Black guifg=Yellow guibg=Black
 hi Visual ctermfg=NONE ctermbg=60 guifg=NONE guibg=#44475a
+

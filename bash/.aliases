@@ -169,3 +169,9 @@ alias t="tree"
 # python
 # alias python="/usr/local/bin/python3"
 # alias pip="python /usr/local/lib/python3.9/site-packages/pip/__main__.py"
+
+# leinigen
+alias lt="lein test"
+
+# rubymine
+alias rbm="/Applications/RubyMine.app/Contents/MacOS/rubymine"
