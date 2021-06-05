@@ -6,8 +6,8 @@ source ~/.nvm/nvm.sh
 export PGHOST=/tmp
 export EDITOR=vim
 export GOPATH=$HOME/go
-# export GOBIN=/usr/local/go/bin
-export GOBIN=$GOPATH/bin
+export GOBIN=/usr/local/go/bin
+# export GOBIN=$GOPATH/bin
 export ELM_HOME=/usr/local/opt/nvm/$(node -v)/lib/node_modules/elm/share
 # export ELM_HOME=$(brew --prefix nvm)/$(node -v)/lib/node_modules/elm/share
 
@@ -26,7 +26,7 @@ psql=/Applications/Postgres.app/Contents/Versions/latest/bin
 tern=~/dev/tern/bin
 cargo=~/.cargo/env
 homebin=~/bin
-python=~/Library/Python/2.7/bin
+python=~/Library/Python/3.9/bin
 deno=~/.deno/bin
 
 export PATH=$homebin:$local_node:$homebrew::$heroku:$java:$gopathbin:$gobin:$pg:$nvm:$devbin:$psql:$tern:$cargo:$python:$deno:$PATH

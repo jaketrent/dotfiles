@@ -3,7 +3,7 @@ alias s="subl ."
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
-    colorflag="--color"
+    colorflag="--color=auto"
 else # OS X `ls`
     colorflag="-G"
 fi
@@ -165,3 +165,7 @@ alias v="/usr/local/bin/vim"
 
 # tree
 alias t="tree"
+
+# python
+# alias python="/usr/local/bin/python3"
+# alias pip="python /usr/local/lib/python3.9/site-packages/pip/__main__.py"
