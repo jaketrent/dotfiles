@@ -80,7 +80,7 @@ alias k="kubectl"
 alias kl="kubelogin"
 
 # vim
-alias v="/usr/local/bin/vim"
+alias v="/usr/bin/vim"
 
 # tree
 alias t="tree"
